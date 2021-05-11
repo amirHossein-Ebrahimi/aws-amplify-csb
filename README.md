@@ -76,7 +76,7 @@ Our `package.json` includes scripts for starting the development server, buildin
 ### App component
 
 ```jsx
-// src/App.jx
+// src/App.jsx
 
 import React from 'react'
 import logo from './logo.svg'
