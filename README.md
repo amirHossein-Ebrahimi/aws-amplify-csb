@@ -1,3 +1,5 @@
+# A First Look at Amplify with Vite
+
 [AWS Amplify](https://aws.amazon.com/amplify/) is a set of tools and services to help frontend web and mobile developers build scalable fullstack applications with AWS infrastructure.
 
 This tutorial will follow the Getting Started guide for React from the [Amplify documentation](https://docs.amplify.aws/start/q/integration/react), except we will be using Vite and the [officially supported](https://vitejs.dev/guide/#scaffolding-your-first-vite-project) [React template](https://github.com/vitejs/vite/tree/main/packages/create-app/template-react) instead of [create-react-app](https://github.com/facebook/create-react-app). This way the kids will know that I am, "with it."
@@ -127,7 +129,7 @@ export default App
 
 ![02-create-vite-app-edited](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/qh6elff8oc10tnywje4w.png)
 
-### Initialize Amplify project with `amplify init`
+## Initialize Amplify project with `amplify init`
 
 To initialize a new Amplify project, run `amplify init` from the root directory of your frontend app.
 
@@ -158,18 +160,18 @@ https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-profiles.html
 ? Please choose the profile you want to use default
 ```
 
-### Deploy to hosting with CloudFront and S3
+## Deploy to hosting with CloudFront and S3 with `amplify publish`
 
 ```bash
 amplify add hosting
 ```
 
 ```
-? Select the plugin module to execute Amazon CloudFront and S3
+? Select the plugin module to execute: Amazon CloudFront and S3
 ? Select the environment setup: DEV (S3 only with HTTP)
-? hosting bucket name ajcwebdevamplify-20210509181751-hostingbucket
-? index doc for the website index.html
-? error doc for the website index.html
+? hosting bucket name: ajcwebdevamplify-20210509181751-hostingbucket
+? index doc for the website: index.html
+? error doc for the website: index.html
 
 You can now publish your app using the following command:
 Command: amplify publish
@@ -194,3 +196,81 @@ Current Environment: dev
 You will then be taken to the [very memorably named endpoint](http://ajcwebdevamplify-20210509181751-hostingbucket-dev.s3-website-us-west-1.amazonaws.com/) for your S3 bucket.
 
 ![03-create-vite-app-hosted](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/5efaiwxvekngq4uhii7w.png)
+
+# Cheat sheet
+
+## 1. Setup
+
+### 1.1 Configure AWS CLI with `aws configure`
+
+```bash
+aws configure
+```
+
+```
+AWS Access Key ID: <YOUR_ACCESS_KEY_ID>
+AWS Secret Access Key: <YOUR_SECRET_ACCESS_KEY>
+Default region name: <YOUR_REGION_NAME>
+Default output format [None]: 
+```
+
+### 1.2 Install Amplify CLI
+
+```bash
+npm install -g @aws-amplify/cli
+```
+
+## 2. Create React App
+
+```bash
+yarn create @vitejs/app ajcwebdev-amplify --template react
+```
+
+### 2.1 Start development server
+
+```bash
+cd ajcwebdev-amplify
+yarn
+yarn dev
+```
+
+## 3. Initialize Amplify project with `amplify init`
+
+```bash
+amplify init
+```
+
+```
+? Enter a name for the project ajcwebdevamplify
+? Enter a name for the environment dev
+? Choose your default editor: Visual Studio Code
+? Choose the type of app that you're building javascript
+
+? What javascript framework are you using react
+? Source Directory Path:  src
+? Distribution Directory Path: dist
+? Build Command:  yarn build
+? Start Command: yarn dev
+
+Using default provider  awscloudformation
+? Select the authentication method you want to use: AWS profile
+? Please choose the profile you want to use default
+```
+
+## 4. Deploy to hosting with CloudFront and S3 with `amplify publish`
+
+```bash
+amplify add hosting
+```
+
+```
+? Select the plugin module to execute: Amazon CloudFront and S3
+? Select the environment setup: DEV (S3 only with HTTP)
+? hosting bucket name: ajcwebdevamplify-20210509181751-hostingbucket
+? index doc for the website: index.html
+? error doc for the website: index.html
+```
+
+```bash
+amplify publish
+```
