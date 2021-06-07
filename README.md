@@ -1,6 +1,6 @@
 [AWS Amplify](https://aws.amazon.com/amplify/) is a set of tools and services to help frontend web and mobile developers build scalable fullstack applications with AWS infrastructure.
 
-This tutorial will follow the Getting Started guide for React from the [Amplify documentation](https://docs.amplify.aws/start/q/integration/react), except we will be using Vite and the [officially support](https://vitejs.dev/guide/#scaffolding-your-first-vite-project) [React template](https://github.com/vitejs/vite/tree/main/packages/create-app/template-react) instead of [create-react-app](https://github.com/facebook/create-react-app). This way the kids will know that I am, "with it."
+This tutorial will follow the Getting Started guide for React from the [Amplify documentation](https://docs.amplify.aws/start/q/integration/react), except we will be using Vite and the [officially supported](https://vitejs.dev/guide/#scaffolding-your-first-vite-project) [React template](https://github.com/vitejs/vite/tree/main/packages/create-app/template-react) instead of [create-react-app](https://github.com/facebook/create-react-app). This way the kids will know that I am, "with it."
 
 ## Setup
 
