@@ -138,26 +138,26 @@ amplify init
 ```
 
 ```
-? Enter a name for the project ajcwebdevamplify
-? Enter a name for the environment dev
+? Enter a name for the project: ajcwebdevamplify
+? Enter a name for the environment: dev
 ? Choose your default editor: Visual Studio Code
-? Choose the type of app that you're building javascript
+? Choose the type of app that you're building: javascript
 
 Please tell us about your project
-? What javascript framework are you using react
+? What javascript framework are you using: react
 ? Source Directory Path:  src
 ? Distribution Directory Path: dist
-? Build Command:  yarn build
+? Build Command: yarn build
 ? Start Command: yarn dev
 
-Using default provider  awscloudformation
+Using default provider: awscloudformation
 
 ? Select the authentication method you want to use: AWS profile
 
 For more information on AWS Profiles, see:
 https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-profiles.html
 
-? Please choose the profile you want to use default
+? Please choose the profile you want to use: default
 ```
 
 ## Deploy to hosting with CloudFront and S3 with `amplify publish`
@@ -241,20 +241,20 @@ amplify init
 ```
 
 ```
-? Enter a name for the project ajcwebdevamplify
-? Enter a name for the environment dev
+? Enter a name for the project: ajcwebdevamplify
+? Enter a name for the environment: dev
 ? Choose your default editor: Visual Studio Code
-? Choose the type of app that you're building javascript
+? Choose the type of app that you're building: javascript
 
-? What javascript framework are you using react
-? Source Directory Path:  src
+? What javascript framework are you using: react
+? Source Directory Path: src
 ? Distribution Directory Path: dist
-? Build Command:  yarn build
+? Build Command: yarn build
 ? Start Command: yarn dev
 
-Using default provider  awscloudformation
+Using default provider: awscloudformation
 ? Select the authentication method you want to use: AWS profile
-? Please choose the profile you want to use default
+? Please choose the profile you want to use: default
 ```
 
 ## 4. Deploy to hosting with CloudFront and S3 with `amplify publish`
