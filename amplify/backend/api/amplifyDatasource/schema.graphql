@@ -1,0 +1,7 @@
+type Cooler @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  name: String
+  image: String
+  adress: AWSIPAddress
+  url: AWSURL
+}
